@@ -1,0 +1,42 @@
+<com.smartchina.smartcharge.acticity.SlidingMenu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_menu"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="@drawable/img_frame_background"
+    android:scrollbars="none"
+    zhy:rightPadding="50dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+        <include layout="@layout/layout_menu" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <com.githang.viewpagerindicator.IconTabPageIndicator
+                android:id="@+id/indicator"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <View android:layout_width="match_parent"
+                android:id="@+id/divider"
+                android:layout_above="@id/indicator"
+                android:layout_height="1px"
+                android:background="#ababab"/>
+            <android.support.v4.view.ViewPager
+                android:layout_above="@id/divider"
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_now"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</com.smartchina.smartcharge.acticity.SlidingMenu>
